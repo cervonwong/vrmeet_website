@@ -145,6 +145,7 @@ class Home extends StatelessWidget {
                       textStyle: MaterialStateProperty.all(
                         GoogleFonts.workSans(
                           fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
                           color: kOnPrimaryColor,
                         ),
                       ),
@@ -165,7 +166,7 @@ class Home extends StatelessWidget {
                         SnackBar(
                           behavior: SnackBarBehavior.floating,
                           margin: const EdgeInsets.all(32.0),
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(20.0),
                           content: Text(
                             'Thanks for showing interest in VRMeet, we\'ll be updating your inbox with the latest VRMeet updates!',
                             style: GoogleFonts.workSans(
