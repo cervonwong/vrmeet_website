@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'VRMeet - Breathe life into online meetings',
+      title: 'VRMeet - Breathe life into online events',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         primaryColor: kPrimaryColor,
@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
             ),
             child: SelectableText.rich(
               TextSpan(
-                text: 'Breathing ',
+                text: 'Breathe ',
                 style: GoogleFonts.workSans(
                   fontSize: 36.0,
                   fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class Home extends StatelessWidget {
                       color: kHighlightColor,
                     ),
                   ),
-                  TextSpan(text: ' into online events'),
+                  TextSpan(text: ' into your online events'),
                 ],
               ),
               textAlign: TextAlign.center,
