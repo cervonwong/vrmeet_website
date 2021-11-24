@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playground/layout_calculator.dart';
 import 'color_constants.dart';
 
 void main() {
@@ -21,18 +22,32 @@ class MyApp extends StatelessWidget {
           primary: kPrimaryColor,
         ),
       ),
-      home: Scaffold(
-        backgroundColor: kBackgroundColor,
-        appBar: AppBar(
-          backgroundColor: kNavColor,
-          elevation: 0.0,
-        ),
-        body: ListView(
-          children: [
-            const SizedBox(
-              height: 100.0,
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: kBackgroundColor,
+      appBar: AppBar(
+        backgroundColor: kNavColor,
+        elevation: 0.0,
+      ),
+      body: ListView(
+        children: [
+          const SizedBox(
+            height: 100.0,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: LayoutCalculator.margin(context: context),
             ),
-            SelectableText.rich(
+            child: SelectableText.rich(
               TextSpan(
                 text: 'Breathing ',
                 style: GoogleFonts.workSans(
@@ -52,10 +67,15 @@ class MyApp extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(
-              height: 24.0,
+          ),
+          const SizedBox(
+            height: 24.0,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: LayoutCalculator.margin(context: context),
             ),
-            SelectableText(
+            child: SelectableText(
               'Host networking events, seminars, exhibitions and more, in virtual reality.',
               textAlign: TextAlign.center,
               style: GoogleFonts.workSans(
@@ -63,91 +83,91 @@ class MyApp extends StatelessWidget {
                 color: kTextColor080,
               ),
             ),
-            const SizedBox(
-              height: 60.0,
-            ),
-            Align(
-              child: SizedBox(
-                width: 300.0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SelectableText(
-                      'Join our waitlist to get early access.',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.workSans(
-                        fontSize: 12.0,
-                        color: kTextColor080,
-                      ),
+          ),
+          const SizedBox(
+            height: 60.0,
+          ),
+          Align(
+            child: SizedBox(
+              width: 300.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SelectableText(
+                    'Join our waitlist to get early access.',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.workSans(
+                      fontSize: 12.0,
+                      color: kTextColor080,
                     ),
-                    const SizedBox(
-                      height: 8.0,
+                  ),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
+                  TextField(
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.workSans(
+                      fontSize: 16.0,
+                      color: kTextColor100,
                     ),
-                    TextField(
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.workSans(
-                        fontSize: 16.0,
-                        color: kTextColor100,
-                      ),
-                      decoration: const InputDecoration(
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: kOutlineColor),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(999.0),
-                          ),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: kOutlineColor),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(999.0),
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: kPrimaryColor,
-                            width: 2.0,
-                          ),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(999.0),
-                          ),
-                        ),
-                        fillColor: kInputBackgroundColor,
-                        hintText: 'Enter email address',
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8.0,
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        textStyle: MaterialStateProperty.all(
-                          GoogleFonts.workSans(
-                            fontSize: 16.0,
-                            color: kOnPrimaryColor,
-                          ),
-                        ),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              999.0,
-                            ),
-                          ),
-                        ),
-                        visualDensity: const VisualDensity(
-                          horizontal: 4.0,
-                          vertical: 4.0,
+                    decoration: const InputDecoration(
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: kOutlineColor),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(999.0),
                         ),
                       ),
-                      onPressed: () {},
-                      child: const Text('Notify me'),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: kOutlineColor),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(999.0),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: kPrimaryColor,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(999.0),
+                        ),
+                      ),
+                      fillColor: kInputBackgroundColor,
+                      hintText: 'Enter email address',
                     ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      textStyle: MaterialStateProperty.all(
+                        GoogleFonts.workSans(
+                          fontSize: 16.0,
+                          color: kOnPrimaryColor,
+                        ),
+                      ),
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            999.0,
+                          ),
+                        ),
+                      ),
+                      visualDensity: const VisualDensity(
+                        horizontal: 4.0,
+                        vertical: 4.0,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text('Notify me'),
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
