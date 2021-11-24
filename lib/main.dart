@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'color_constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,19 +10,143 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'VRMeet - Breathe life into online meetings',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light().copyWith(
+        primaryColor: kPrimaryColor,
+        colorScheme: const ColorScheme.light().copyWith(
+          primary: kPrimaryColor,
+        ),
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Placeholder'
-          ),
+      home: Scaffold(
+        backgroundColor: kBackgroundColor,
+        appBar: AppBar(
+          backgroundColor: kNavColor,
+          elevation: 0.0,
+        ),
+        body: ListView(
+          children: [
+            const SizedBox(
+              height: 100.0,
+            ),
+            SelectableText.rich(
+              TextSpan(
+                text: 'Breathing ',
+                style: GoogleFonts.workSans(
+                  fontSize: 36.0,
+                  fontWeight: FontWeight.w600,
+                  color: kTextColor100,
+                ),
+                children: const [
+                  TextSpan(
+                    text: 'life',
+                    style: TextStyle(
+                      color: kHighlightColor,
+                    ),
+                  ),
+                  TextSpan(text: ' into online events'),
+                ],
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 24.0,
+            ),
+            SelectableText(
+              'Host networking events, seminars, exhibitions and more, in virtual reality.',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.workSans(
+                fontSize: 16.0,
+                color: kTextColor080,
+              ),
+            ),
+            const SizedBox(
+              height: 60.0,
+            ),
+            Align(
+              child: SizedBox(
+                width: 300.0,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    SelectableText(
+                      'Join our waitlist to get early access.',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.workSans(
+                        fontSize: 12.0,
+                        color: kTextColor080,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    TextField(
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.workSans(
+                        fontSize: 16.0,
+                        color: kTextColor100,
+                      ),
+                      decoration: const InputDecoration(
+                        filled: true,
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: kOutlineColor),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(999.0),
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kOutlineColor),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(999.0),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: kPrimaryColor,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(999.0),
+                          ),
+                        ),
+                        fillColor: kInputBackgroundColor,
+                        hintText: 'Enter email address',
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        textStyle: MaterialStateProperty.all(
+                          GoogleFonts.workSans(
+                            fontSize: 16.0,
+                            color: kOnPrimaryColor,
+                          ),
+                        ),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              999.0,
+                            ),
+                          ),
+                        ),
+                        visualDensity: const VisualDensity(
+                          horizontal: 4.0,
+                          vertical: 4.0,
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: const Text('Notify me'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
