@@ -160,7 +160,15 @@ class Home extends StatelessWidget {
                         vertical: 4.0,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'Thanks for showing interest in VRMeet, we\'ll be updating your inbox with the latest VRMeet updates!',
+                          ),
+                        ),
+                      );
+                    },
                     child: const Text('Notify me'),
                   ),
                 ],
