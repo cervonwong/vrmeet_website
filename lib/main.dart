@@ -162,9 +162,15 @@ class Home extends StatelessWidget {
                     ),
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
+                        SnackBar(
+                          behavior: SnackBarBehavior.floating,
+                          margin: const EdgeInsets.all(32.0),
+                          padding: const EdgeInsets.all(16.0),
                           content: Text(
                             'Thanks for showing interest in VRMeet, we\'ll be updating your inbox with the latest VRMeet updates!',
+                            style: GoogleFonts.workSans(
+                              fontSize: 14.0,
+                            ),
                           ),
                         ),
                       );
