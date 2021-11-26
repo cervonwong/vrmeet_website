@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   SelectableText(
-                    'Join our waitlist to get early access.',
+                    'Join our wait list to get early access.',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.workSans(
                       fontSize: 12.0,
@@ -180,6 +180,19 @@ class Home extends StatelessWidget {
                     child: const Text('Notify me'),
                   ),
                 ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 48.0),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: LayoutCalculator.margin(context: context),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12.0),
+              child: const Image(
+                image: AssetImage('images/image1.png'),
+                fit: BoxFit.fill,
               ),
             ),
           ),
