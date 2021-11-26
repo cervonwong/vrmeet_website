@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'VRMeet - Breathe life into online events',
+      title: 'EventCloud - Breathe life into online events',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         primaryColor: kPrimaryColor,
@@ -168,7 +168,7 @@ class Home extends StatelessWidget {
                           margin: const EdgeInsets.all(32.0),
                           padding: const EdgeInsets.all(20.0),
                           content: Text(
-                            'Thanks for showing interest in VRMeet, we\'ll be updating your inbox with the latest VRMeet updates!',
+                            'Thanks for showing interest in EventCloud, we\'ll be updating your inbox with the latest EventCloud updates!',
                             style: GoogleFonts.workSans(
                               fontSize: 14.0,
                             ),

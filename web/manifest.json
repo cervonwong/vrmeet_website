@@ -1,11 +1,11 @@
 {
-    "name": "vrmeet_website",
-    "short_name": "vrmeet_website",
+    "name": "EventCloud",
+    "short_name": "EventCloud",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A dummy website for VRMeet",
+    "description": "A dummy website for EventCloud",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
