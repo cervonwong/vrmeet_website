@@ -149,6 +149,7 @@ class Home extends StatelessWidget {
                           color: kOnPrimaryColor,
                         ),
                       ),
+                      elevation: MaterialStateProperty.all(0.0),
                       shape: MaterialStateProperty.all(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
