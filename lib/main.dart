@@ -37,6 +37,10 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kNavColor,
         elevation: 0.0,
+        title: const Image(
+          height: 24.0,
+          image: AssetImage('images/logo.png'),
+        ),
       ),
       body: ListView(
         children: [
