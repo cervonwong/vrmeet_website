@@ -1,11 +1,11 @@
 {
-    "name": "EventCloud",
-    "short_name": "EventCloud",
+    "name": "EventVerse",
+    "short_name": "EventVerse",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A dummy website for EventCloud",
+    "description": "A dummy website for EventVerse",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

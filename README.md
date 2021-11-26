@@ -1,3 +1,3 @@
 # VRMeet
 
-[Our website](https://eventcloud.cervonwong.com).
+[Our website](https://eventverse.cervonwong.com).
