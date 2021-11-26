@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
+  final TextEditingController _controller = TextEditingController();
+
   Home({Key? key}) : super(key: key);
 
   @override
@@ -109,6 +111,7 @@ class Home extends StatelessWidget {
                     height: 8.0,
                   ),
                   TextField(
+                    controller: _controller,
                     textAlign: TextAlign.center,
                     style: GoogleFonts.workSans(
                       fontSize: 16.0,
@@ -173,7 +176,9 @@ class Home extends StatelessWidget {
                           margin: const EdgeInsets.all(32.0),
                           padding: const EdgeInsets.all(20.0),
                           content: Text(
-                            'Thanks for showing interest in EventVerse, we\'ll be updating your inbox with the latest EventVerse updates!',
+                            !_controller.text.contains('@')
+                                ? 'Please enter a valid email'
+                                : 'Thanks for showing interest in EventVerse, we\'ll be updating your inbox with the latest EventVerse updates!',
                             style: GoogleFonts.workSans(
                               fontSize: 14.0,
                             ),
